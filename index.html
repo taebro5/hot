@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        html{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            background-color: #3d0101;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .main {
+            width: 100%
+        }
+
+        @media all and (min-width: 1000px) {
+            .main {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.rwdImageMaps.min.js"></script>
+    <script src="./js/ios-orientationchange-fix.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <img class="pc-image" src="./img/naver randing.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="" alt="1" title="1" href="https://hot-1111.com" coords="365,2977,2149,3213" shape="rect">
+            <area target="" alt="2" title="2" href="https://hot-2222.com" coords="369,3279,2149,3518" shape="rect">
+        
+           
+        </map>
+    </div>
+
+    <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function (e) {
+                $('.pc-image').rwdImageMaps();
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
